@@ -1,0 +1,18 @@
+{% extends "base_generic.html" %}
+
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+
+{% block content %}
+  <h1>Home Page</h1>
+  <p>
+    Welcome to Akash's portfolio website
+  </p>
+  <h2>Dynamic content</h2>
+  <p>Counts:</p>
+  <ul>
+    <li><strong>Emails:</strong> {{ email_count }}</li>
+  </ul>
+{% endblock %}

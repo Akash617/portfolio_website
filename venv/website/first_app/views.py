@@ -55,8 +55,9 @@ def enter_email(request):
 
         # Check if the form is valid:
         if form.is_valid():
-            # process the data in form.cleaned_data as required (here we just write it to the model due_back field)
+            # process the data in form.cleaned_data as required
             email = Email_Model()
+            email_value = ''
             email_value = validate_email(request, form.cleaned_data["email"])
 
             if not email_value:
